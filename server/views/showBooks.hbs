@@ -3,13 +3,12 @@
 <h2>books:</h2>
 
 <ul class="cards">
-  {{#each book}}
+  {{#each books}}
   <li class="card">
     <div class="book">
       <span class="title">{{name}}</span>
       <h3 class="author">{{author}}</h3>
-      <p class="data">{{description}}</p>
-      {{!-- <a href="/books/{{id}}/edit">edit book</a> --}}
+      <a href="/books/{{id}}/edit">edit book</a>
     </div>
   </li>
   {{/each}}

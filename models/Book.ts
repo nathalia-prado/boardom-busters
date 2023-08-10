@@ -1,6 +1,8 @@
 export interface BookData {
   name: string
-  description: string
+  author: string
+  activityLength: number
+  activityGroup: number
 }
 
 export interface Book extends BookData {
