@@ -1,0 +1,15 @@
+{{> booksNav}}
+
+<h2>books:</h2>
+
+<ul class="cards">
+  {{#each books}}
+  <li class="card">
+    <div class="book">
+      <span class="title">{{name}}</span>
+      <p class="data">{{description}}</p>
+      <a href="/books/{{id}}/edit">edit book</a>
+    </div>
+  </li>
+  {{/each}}
+</ul>

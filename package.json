@@ -1,0 +1,56 @@
+{
+  "name": "boardom-busters",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Enjoy your boredom",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "build": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
+    "dev": "tsx watch server/index.ts",
+    "knex": "knex --knexfile ./server/db/knexfile.js",
+    "test": "vitest",
+    "format": "prettier -w '**/*.{js,jsx,ts,tsx}'"
+  },
+  "author": "Boardom Busters",
+  "license": "ISC",
+  "keywords": [
+    "db",
+    "database",
+    "backend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mako-2023/boardom-busters.git"
+  },
+  "eslintConfig": {
+    "extends": "@devacademy"
+  },
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "knex": "^2.3.0",
+    "sqlite3": "^5.1.2"
+  },
+  "devDependencies": {
+    "@devacademy/eslint-config": "^1.8.0",
+    "@testing-library/dom": "^8.17.1",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@types/express": "^4.17.14",
+    "esbuild": "^0.18.16",
+    "eslint": "^8.10.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jsdom": "^22.1.0",
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.1",
+    "tsx": "^3.12.7",
+    "vitest": "^0.33.0"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
