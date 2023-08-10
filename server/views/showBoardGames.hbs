@@ -1,13 +1,13 @@
-{{> booksNav}}
+{{> boardGamesNav}}
 
-<h2>books:</h2>
+<h2>board games:</h2>
 
 <ul class="cards">
-  {{#each book}}
+  {{#each game}}
   <li class="card">
-    <div class="book">
+    <div class="game">
       <span class="title">{{name}}</span>
-      <h3 class="author">{{author}}</h3>
+      <p class="difficulty">{{difficulty}}</p>
       <p class="data">{{description}}</p>
       {{!-- <a href="/books/{{id}}/edit">edit book</a> --}}
     </div>

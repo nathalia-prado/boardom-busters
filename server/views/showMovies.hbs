@@ -1,13 +1,13 @@
-{{> booksNav}}
+{{> moviesNav}}
 
-<h2>books:</h2>
+<h2>movies:</h2>
 
 <ul class="cards">
-  {{#each book}}
+  {{#each movie}}
   <li class="card">
-    <div class="book">
+    <div class="movie">
       <span class="title">{{name}}</span>
-      <h3 class="author">{{author}}</h3>
+      <h3 class="director">{{director}}</h3>
       <p class="data">{{description}}</p>
       {{!-- <a href="/books/{{id}}/edit">edit book</a> --}}
     </div>
