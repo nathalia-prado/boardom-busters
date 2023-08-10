@@ -2,8 +2,10 @@ import * as Path from 'node:path'
 
 import express from 'express'
 import * as hbs from 'express-handlebars'
+import * as utils from './utils/utils.ts'
 
-import bookRoutes from './routes/boardom.ts'
+import boardom from './routes/boardom.ts'
+import * as book from '../models/Book.ts'
 
 /*
  * create the server
@@ -29,7 +31,17 @@ server.set('views', Path.resolve('server/views'))
  *************************/
 
 server.get('/', (req, res) => {
-  res.redirect('/boardom')
+  res.render('homepage')
 })
 
-server.use('/boardom', bookRoutes)
+server.get('/show-all-books', async (req, res) => {
+  const books = await utils.showAllBooks()
+  res.render('showBooks', { books })
+})
+
+// router.get('/', async (req, res) => {
+//   const getWombles = await db.getAllWombles()
+//   res.render('all-wombles', { getWombles })
+// })
+
+// server.use('/boardom', boardom)
