@@ -3,17 +3,23 @@ export async function seed(knex) {
     {
       id: 1,
       name: 'Milk and honey',
-      description: "Milk and honey's description ",
+      author: "Rupi Kaur",
+      activity_length: 1,
+      activity_group: 1
     },
     {
       id: 2,
       name: 'The wee free men',
-      description: "The wee free men's description",
+      author: "Terry Pratchett",
+      activity_length: 2,
+      activity_group: 1
     },
     {
       id: 3,
       name: 'Shogun',
-      description: "Shogun's description",
+      author: "James Clavell",
+      activity_length: 3,
+      activity_group: 1
     }
   ])
 }
