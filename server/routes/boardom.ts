@@ -5,7 +5,6 @@ import * as db from '../db/index.ts'
 const router = express.Router()
 
 // GET /books
-// TODO: Replace this with all of the books in the database
 router.get('/', async (req, res, next) => {
   try {
     const books = await db.getAllBooks()
