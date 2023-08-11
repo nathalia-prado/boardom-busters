@@ -4,7 +4,7 @@
 }
 
 html {
-  background-color: #afc2d5;
+  background-color: rgb(50, 71, 103);
 }
 
 body {
@@ -16,10 +16,10 @@ body {
 }
 
 header {
-  background-image: url('/images/forest-header.jpg');
+  background-image: url('/images/header.png');
   background-size: cover;
   background-position: center;
-  background-color: #000724;
+  background-color: #570040;
   width: 100%;
 }
 
@@ -30,7 +30,7 @@ a:visited {
 }
 
 a:hover {
-  color: #b80c09;
+  color: #9a0076;
 }
 
 h1 {
@@ -108,15 +108,15 @@ p {
 
 /* Assign icons to list items */
 .cards li:nth-of-type(5n + 1) {
-  background-image: url('#');
+  background-image: url('/images/icons/milk_and_honey.jpg');
 }
 
 .cards li:nth-of-type(5n + 2) {
-  background-image: url('#');
+  background-image: url('/images/icons/the_wee_free_men.jpg');
 }
 
 .cards li:nth-of-type(5n + 3) {
-  background-image: url('#');
+  background-image: url('/images/icons/shogun.jpg');
 }
 
 .book {
@@ -165,7 +165,7 @@ button {
 
 button:hover {
   background-color: #1a5068;
-  color: white;
+  color: black;
 }
 
 textarea {
@@ -205,7 +205,7 @@ footer {
   bottom: 0;
   width: 100%;
   height: 60px;
-  background-color: #1a5068;
+  background-color: #afc2d5;
   text-align: center;
 }
 
