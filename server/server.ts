@@ -60,9 +60,13 @@ server.get('/show-game/:id', async (req, res) => {
   res.render('singleGame', gameById)
 })
 
-// router.get('/', async (req, res) => {
-//   const getWombles = await db.getAllWombles()
-//   res.render('all-wombles', { getWombles })
-// })
+server.get('/show-all-movies', async (req, res) => {
+  const movies = await utils.showAllMovies()
+    res.render('showMovies', { movies })
+})
 
-// server.use('/boardom', boardom)
+server.get('/show-movie/:id', async (req, res) => {
+  const movieId = parseInt(req.params.id)
+  const movie = await utils.getMovieById(movieId)
+  res.render('singleMovie', movie)
+})

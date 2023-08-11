@@ -1,16 +1,13 @@
 <!-- {{> moviesNav}} -->
 
-<h2>movies:</h2>
+<h2>{{name}}</h2>
 
 <ul class="cards">
-  {{#each movies}}
   <li class="card">
     <div class="movie">
-      <img src="images/icons/movie-{{id}}.jpg" alt="{{name}}">
       <span class="title">{{name}}</span>
       <h3 class="director">{{director}}</h3>
       <a href='/show-movie/{{id}}'>MORE DETAILS</a>
     </div>
   </li>
-  {{/each}}
 </ul>
