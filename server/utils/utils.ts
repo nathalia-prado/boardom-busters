@@ -1,5 +1,6 @@
 import knexFile from '../db/knexfile.js'
 import knex from 'knex'
+import type { Movie } from '../../models/Movie.ts'
 
 type Environment = 'production' | 'test' | 'development'
 
@@ -23,4 +24,22 @@ export async function getBookById(bookId: number) {
 export async function getGameById(gameId: number) {
   const result = await db('board_games').where('board_games.id', gameId).first()
   return result
+}
+
+export async function showAllMovies(): Promise<Movie[]> {
+  try {
+    return db('movies').select()
+  } catch (err: any) {
+    console.log(err.message)
+    return err.message
+  }
+}
+
+export function getMovieById(id: number): Promise<Movie> {
+  try {
+    return db('movies').select().where({ id }).first()
+  } catch (err: any) {
+    console.log(err.message)
+    return err.message
+  }
 }
