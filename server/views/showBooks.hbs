@@ -1,4 +1,4 @@
-{{> booksNav}}
+
 
 <h2>books:</h2>
 
@@ -6,13 +6,13 @@
   {{#each books}}
   <li class="card">
     <div class="book">
-      <span class="title">{{books.name}}</span>
+      {{!-- <span class="title">{{books.name}}</span></a>
       <h3 class="author">{{books.author}}</h3>
-      <p class="data">{{books.description}}</p>
+      <p class="data">{{books.description}}</p> --}}
       {{!-- <a href="/books/{{id}}/edit">edit book</a> --}}
       <span class="title">{{name}}</span>
       <h3 class="author">{{author}}</h3>
-      <a href="/books/{{id}}/edit">edit book</a>
+      <a href="/:id/show-book">MORE DETAILS</a>
     </div>
   </li>
   {{/each}}

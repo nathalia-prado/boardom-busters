@@ -5,7 +5,7 @@ import * as hbs from 'express-handlebars'
 import * as utils from './utils/utils.ts'
 
 import boardom from './routes/boardom.ts'
-import * as book from '../models/Book.ts'
+// import * as book from '../models/Book.ts'
 
 /*
  * create the server
@@ -34,9 +34,30 @@ server.get('/', (req, res) => {
   res.render('homepage')
 })
 
+server.get('/group-size', (req, res) => {
+  res.render('smallOrLarge')
+})
+
+server.get('/:id/show-book', async (req, res) => {
+  const bookId = Number(req.params.id)
+  const bookById = await utils.getBookById(bookId)
+  res.render('singleBook', bookById)
+})
+
 server.get('/show-all-books', async (req, res) => {
   const books = await utils.showAllBooks()
   res.render('showBooks', { books })
+})
+
+server.get('/show-all-games', async (req, res) => {
+  const game = await utils.showAllBoardGames()
+  res.render('showBoardGames', { game })
+})
+
+server.get('/:id/show-game', async (req, res) => {
+  const gameId = Number(req.params.id)
+  const gameById = await utils.getGameById(gameId)
+  res.render('singleGame', gameById)
 })
 
 // router.get('/', async (req, res) => {
