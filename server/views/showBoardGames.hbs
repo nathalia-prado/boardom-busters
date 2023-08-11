@@ -1,4 +1,4 @@
-{{> boardGamesNav}}
+
 
 <h2>board games:</h2>
 
@@ -6,9 +6,9 @@
   {{#each game}}
   <li class="card">
     <div class="game">
+      <img src="images/icons/game-{{name}}.jpg" alt="{{name}}">
       <span class="title">{{name}}</span>
-      <p class="difficulty">{{difficulty}}</p>
-      <p class="data">{{description}}</p>
+      <p class="difficulty">{{difficult}}</p>
       {{!-- <a href="/books/{{id}}/edit">edit book</a> --}}
     </div>
   </li>
