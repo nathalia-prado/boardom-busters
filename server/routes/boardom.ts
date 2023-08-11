@@ -6,7 +6,6 @@ import * as utils from '../utils/utils.ts'
 const router = express.Router()
 
 // GET /books
-// TODO: Replace this with all of the books in the database
 router.get('/', async (req, res, next) => {
   res.render('homepage')
 })
