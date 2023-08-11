@@ -200,6 +200,19 @@ textarea {
   background-color: white;
 }
 
+.selector {
+  text-align: center;
+}
+
+#center {
+  text-align: center;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
 footer {
   position: absolute;
   bottom: 0;
