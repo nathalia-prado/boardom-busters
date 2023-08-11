@@ -4,7 +4,7 @@ import express from 'express'
 import * as hbs from 'express-handlebars'
 import * as utils from './utils/utils.ts'
 
-import boardom from './routes/boardom.ts'
+// import boardom from './routes/boardom.ts'
 // import * as book from '../models/Book.ts'
 
 /*
@@ -38,7 +38,7 @@ server.get('/group-size', (req, res) => {
   res.render('smallOrLarge')
 })
 
-server.get('/:id/show-book', async (req, res) => {
+server.get('/show-book/:id', async (req, res) => {
   const bookId = Number(req.params.id)
   const bookById = await utils.getBookById(bookId)
   res.render('singleBook', bookById)
@@ -54,7 +54,7 @@ server.get('/show-all-games', async (req, res) => {
   res.render('showBoardGames', { game })
 })
 
-server.get('/:id/show-game', async (req, res) => {
+server.get('/show-game/:id', async (req, res) => {
   const gameId = Number(req.params.id)
   const gameById = await utils.getGameById(gameId)
   res.render('singleGame', gameById)

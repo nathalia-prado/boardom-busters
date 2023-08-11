@@ -1,12 +1,12 @@
 import express from 'express'
 
-import * as db from '../db/index.ts'
+// import * as db from '../db/index.ts'
 import * as utils from '../utils/utils.ts'
 
 const router = express.Router()
 
 // GET /books
-router.get('/', async (req, res, next) => {
+router.get('/', async (req, res) => {
   res.render('homepage')
 })
 
